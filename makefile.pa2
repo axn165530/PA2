@@ -1,0 +1,12 @@
+all: fcount fdisp
+fcount: fcount.o 
+	g++ fcount.o -o fcount
+fcount.o: fcount.cpp
+	g++ -c fcount.cpp
+fdisp: fdisp.o
+	g++ fdisp.o -o fdisp
+fdisp.o: fdisp.cpp
+	g++ -c fdisp.cpp
+clean:
+	rm *.o fcount fdisp
+
